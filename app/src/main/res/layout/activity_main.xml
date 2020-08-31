@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:text="@string/_2048"
+            android:background="#ebd234"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/score"
+            android:background="#292300"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/app_name"
+            app:layout_constraintEnd_toStartOf="@id/best"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/best"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/best"
+            android:background="#292300"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/new_game"
+            android:background="#b83502"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@id/score"
+            app:layout_constraintEnd_toEndOf="@id/best"
+            app:layout_constraintTop_toBottomOf="@id/score"
+            app:layout_constraintBottom_toBottomOf="@id/app_name"/>
+
+        <com.mkr.a2048assignment.customUi.MatrixView
+            android:id="@+id/matrix_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/matrix_overlay"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/matrix_view"
+            app:layout_constraintEnd_toEndOf="@id/matrix_view"
+            app:layout_constraintStart_toStartOf="@id/matrix_view"
+            app:layout_constraintTop_toTopOf="@id/matrix_view" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

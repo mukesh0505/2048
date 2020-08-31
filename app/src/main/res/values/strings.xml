@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">2048Assignment</string>
+    <string name="_2048">2048</string>
+    <string name="score">Score\n%s</string>
+    <string name="best">Best\n%s</string>
+    <string name="new_game">New Game</string>
+</resources>
